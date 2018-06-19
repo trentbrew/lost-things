@@ -1,0 +1,142 @@
+/*
+Course: IT238 Assignment 4
+Name: Trenton Brew
+Date: Jan 29, 2018
+Description: css file to make the game look sexy
+*/
+
+body {
+  color: #757575;
+  font-family: roboto, sans-serif;
+  background-color: #EEEEEE;
+  margin: 60px;
+  transition: 900ms;
+}
+
+#main {
+  background-color: #FFFFFF;
+  width: 520px;
+  height: 520px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0px 5px 41px -5px rgba(0,0,0,0.35);
+  transition: 700ms;
+}
+
+.square {
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #E0E0E0;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  transition: 50ms;
+  text-align: center;
+}
+
+.square:hover {
+  background-color: #BDBDBD;
+  cursor: pointer;
+}
+
+ th {
+   color: #BDBDBD;
+   padding: 10px;
+   width: 30px;
+   height: 30px;
+ }
+
+#message {
+  opacity: 0;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -465px;
+  width: 350px;
+  height: 100px;
+  /*border-radius: 15px;
+  border-style: solid;
+  border-color: #BDBDBD;*/
+  transition: 300ms;
+  text-align: center;
+}
+
+#message-text {
+  color: #9E9E9E;
+  width: 280px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#exit-button {
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20px;
+  height: 20px;
+  color: #9E9E9E;
+  cursor: pointer;
+  text-align: center;
+}
+
+.count {
+  color: #9E9E9E;
+}
+
+.divider {
+  height: 2px;
+  width: 160px;
+  background-color: #BDBDBD;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#restart-button {
+  position: absolute;
+  margin: auto;
+  bottom: 50px;
+  left: 50px;
+  color: #BDBDBD;
+  border-style: solid;
+  border-color: #BDBDBD;
+  border-radius: 15px;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  transition: 100ms;
+  cursor: pointer;
+}
+
+#restart-button:hover {
+  background-color: #BDBDBD;
+  color: #FFFFFF;
+}
+
+/*the css below is for a shake effect when nothing is found*/
+
+.animation-active {
+  animation: shake 200ms 2 linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(6px, 0);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

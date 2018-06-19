@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<!--
+Course: IT238 Assignment 4
+Name: Trenton Brew
+Date: Jan 29, 2018
+Description: html skeleton for game
+-->
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Game Board</title>
+    <link type="text/css" rel="stylesheet" href="game.css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+  </head>
+
+  <body>
+    <!--h1>Archaeology Board</h1-->
+    <div id="main">
+      <table id="board"></table>
+    </div>
+    <!--message stuff-->
+    <div id="message">
+      <div id="exit-button"><strong>^</strong></div>
+      <div id="message-text"></div>
+    </div>
+    <!--count stuff-->
+    <p id="score" class="count">Score: <strong>0</strong></p>
+    <div class="divider"></div>
+    <p id="count-umberella" class="count">Umberellas left: <strong>6</strong></p>
+    <p id="count-camera" class="count">Cameras left: <strong>5</strong></p>
+    <p id="count-pencil" class="count">Pencils left: <strong>4</strong></p>
+    <p id="count-mug" class="count">Mugs left: <strong>3</strong></p>
+    <p id="count-phone" class="count">Phones left: <strong>2</strong></p>
+    <div class="divider"></div>
+    <p id="num-tries" class="count">Total tries: <strong>0</strong></p>
+    <p id="num-success" class="count">Successful tries: <strong>0</strong></p>
+    <p id="num-failure" class="count">Failed tries: <strong>0</strong></p>
+    <div id="summary-divider"></div>
+    <p id="summary"></p>
+    <!--restart button-->
+    <div id="restart-button"><strong>New game</strong></div>
+  </body>
+</html>
