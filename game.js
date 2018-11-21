@@ -54,17 +54,25 @@ function handlePreClicked() {
 //----------cell clicked function----------
 
 function handleCellClicked(target) {
+  console.log("cell clicked");
   $(target).css({
     'background-color':'#9E9E9E'
   });
   //show message
   $("#message").css({
-    'opacity':'1'
+    'opacity':'1',
   });
   //expand main card
   $("#main").css({
     'height':'650px'
   });
+
+  /*setTimeout(function() {
+    $("#main").css('height','520px');
+    $("#message").css({
+      'opacity':'0'
+    });
+  }, 800);*/
 }
 
 //----------item found function----------
@@ -311,6 +319,62 @@ function tryDig(targetCell, board) {
   }
 }
 
+//----------handle reset function----------
+
+function handleReset() {
+  score = 0;
+  umberellaCount = 6;
+  cameraCount = 5;
+  pencilCount = 4;
+  mugCount = 3;
+  phoneCount = 2;
+  numTries = 0;
+  numSuccess = 0;
+  numFailure = 0;
+  selectedCells = [];
+
+  $("#score strong").html(score);
+  $("#count-umberella strong").html(umberellaCount);
+  $("#count-camera strong").html(cameraCount);
+  $("#count-mug strong").html(mugCount);
+  $("#count-pencil strong").html(pencilCount);
+  $("#count-phone strong").html(phoneCount);
+  $("#num-tries strong").html(numTries);
+  $("#num-success strong").html(numSuccess);
+  $("#num-failure strong").html(numFailure);
+
+  $("body").css({
+    'background-color':'#EEEEEE'
+  });
+  $("#summary-divider").removeClass("divider");
+  $("#restart-button").css({
+    'border-color':'#BDBDBD',
+    'color':'#BDBDBD',
+    'background-color':'#EEEEEE'
+
+  });
+  $("#summary").css({
+    'display':'none'
+  })
+  $(".count").css({
+    'color':'#9E9E9E'
+  });
+  $(".divider").css({
+    'background-color':'#BDBDBD'
+  });
+  $("#score").css({
+    'color':'#9E9E9E'
+  });
+  $("#message").css({
+    'border-color':'#66BB6A',
+    'opacity':'0',
+    'margin-top':'0px'
+  });
+  $("#main").css({
+    "height": "520px"
+  });
+}
+
 //----------------------------------events-------------------------------------
 
 $(window).ready(function() {
@@ -359,6 +423,15 @@ $(window).ready(function() {
 
   $("#restart-button").click(function() {
     location.reload(); //refreshing page
+
+    /*console.log("clicked new game");
+
+    won = false;
+    handleReset();
+
+    board = new GameBoard();
+    board.setBoard();
+    isFound = false;*/
   });
 
   //----------hover event for restart button after win----------
