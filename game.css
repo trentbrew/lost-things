@@ -11,6 +11,7 @@ body {
   background-color: #EEEEEE;
   margin: 60px;
   transition: 900ms;
+  display: block;
 }
 
 #main {
