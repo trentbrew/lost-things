@@ -281,7 +281,7 @@ function displaySummary() {
     grade = "B-<br>Nice job. You're about average at this game.<br>You can get an A, I believe in you!";
   }
   else if(score >= 74 && score < 80) {
-    grade = "C+, or shall I say... C++?<br>All jokes aside, you did alright.<br>Definitely Not great though.";
+    grade = "C+, or shall I say... C++?<br>All jokes aside, you did alright.";
   }
   else if(score >= 70 && score < 74) {
     grade = "C-<br>You pass, but you still suck. Try again and do better!";
